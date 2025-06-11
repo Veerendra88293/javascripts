@@ -1,0 +1,45 @@
+.color_bg{
+text-align: center;
+
+border-radius: 20px;
+padding: 50px;
+}
+.diff_color{
+    
+    gap: 20px;
+    
+}
+#a{
+    background-color: #E4B34C;
+    border: 4px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+
+    
+    
+}
+#b{
+    background-color:#E4080A ;
+    border: 4px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+#c{
+    background-color: #5DE2E7;
+    border: 4px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+#d{
+    background-color: #E7DDFF;
+    border: 4px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+#bgg{
+background-color:#E4B34C ;
+}

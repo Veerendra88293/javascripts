@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.todos-bg-container {
+  background-color: #f9fbfe;
+  height: 100vh;
+}
+
+.todos-heading {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 46px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.create-task-heading {
+  font-family: "Roboto";
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.create-task-heading-subpart {
+  font-family: "Roboto";
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.todo-items-heading {
+  font-family: "Roboto";
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.todo-items-heading-subpart {
+  font-family: "Roboto";
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.todo-items-container {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.todo-item-container {
+  margin-top: 15px;
+}
+
+.todo-user-input {
+  background-color: white;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e4e7eb;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.add-todo-button {
+  color: white;
+  background-color: #4c63b6;
+  font-family: "Roboto";
+  font-size: 18px;
+  border-width: 0px;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.label-container {
+  background-color: #e6f6ff;
+  width: 100%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #096f92;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 4px;
+}
+
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.checkbox-label {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  width: 82%;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}
+
+.delete-icon-container {
+  text-align: right;
+  width: 18%;
+}
+
+.delete-button {
+  padding: 15px;
+}
+.label_striker{
+  text-decoration: line-through;
+}
+
+/* 
+// var1=document.createElement("button")
+// var1.textContent="hi"
+// document.body.append(var1)
+
+// let var1=document.createElement('input')
+// var1.type="checkbox"
+// var1.id="mm"
+// document.getElementById("todoItemsContainer").append(var1)
+
+// let var2=document.createElement('label')
+// var2.textContent="male"
+// var2.htmlFor="mm"
+// document.getElementById("todoItemsContainer").append(var2)
+
+// document.getElementById('mm').setAttribute("src","js.js")
+
+// var1=document.createElement("img")
+// var1.setAttribute("src","https://i5.walmartimages.com/asr/d5a07031-c3f5-4006-a8fe-c4caa767f26d.3af1c39825906baaa1ff2dca1122bc6d.jpeg")
+// document.getElementById("todoItemsContainer").append(var1)
+
+
+// var1=document.getElementById("ul_id")
+// let li_item=document.createElement("li");
+// li_item.textContent="hiiii"
+
+
+
+// var1.appendChild(li_item);
+
+// let para1=document.getElementById("p_id")
+// let li_item=document.createElement("li");
+// li_item.classList.add("todo-items-container", "d-flex", "flex-row");
+// li_item.id="todoItemsContainer";
+// para1.appendChild(li_item)
+
+//  let checkbox_create=document.createElement("input")
+//  checkbox_create.type="checkbox"
+//  checkbox_create.id="checkboxId"
+//  checkbox_create.classList.add("checkbox-input")
+//  para1.appendChild(checkbox_create)
+
+//  let div_create=document.createElement("div")
+//  div_create.classList.add("label-container")
+//  para1.appendChild(div_create)
+
+
+// let label_create=document.createElement("label")
+// label_create.setAttribute("for","checkboxId")
+// label_create.classList.add("checkbox-label")
+// label_create.textContent="football"
+// div_create.appendChild(label_create)
+
+// let button_create=document.createElement("button")
+// button_create.classList.add("delete-icon")
+// button_create.textContent="delete"
+// para1.appendChild(button_create)
+
+
+function labelstriker(checkboxIdd,labelId){
+let inputEle=document.getElementById(checkboxIdd)
+let labelEle=document.getElementById(labelId)
+if (inputEle.checked===true){
+    labelEle.classList.add("label_striker")
+}else{
+    labelEle.classList.remove("label_striker")
+}
+
+}
+
+// console.log(obj[0].text)
+function createTodo(items){
+    let checkboxIdd="checkboxId"+items.id
+    let labelId="label"+items.id
+let para1=document.getElementById("p_id")
+para1.classList.add("d-flex","flex-row")
+let li_item=document.createElement("li");
+li_item.classList.add("todo-items-container");
+li_item.id="todoItemsContainer";
+para1.appendChild(li_item)
+let break_=document.createElement("br");
+li_item.before(break_)
+
+ let checkbox_create=document.createElement("input")
+ checkbox_create.type="checkbox"
+ checkbox_create.id=checkboxIdd
+ checkbox_create.classList.add("checkbox-input")
+ checkbox_create.onclick=function(){
+    labelstriker(checkboxIdd,labelId)
+ }
+ para1.appendChild(checkbox_create)
+ varr=checkbox_create
+ console.log(varr.checked)
+
+ let div_create=document.createElement("div")
+ div_create.classList.add("label-container")
+ para1.appendChild(div_create)
+
+
+let label_create=document.createElement("label")
+label_create.setAttribute("for",checkboxIdd)
+label_create.classList.add("checkbox-label")
+label_create.textContent=items.text
+label_create.id=labelId
+div_create.appendChild(label_create)
+
+let button_create=document.createElement("button")
+button_create.classList.add("delete-icon")
+button_create.textContent="delete"
+button_create.onclick=()=>{
+const list_remove=document.getElementById("")
+list_remove.remove();
+}
+para1.appendChild(button_create)
+
+}
+var web_input=document.getElementById("todoUserInput")
+
+
+let obj_array=[
+    {
+        text:"football",
+        id:1
+    },
+    {
+         text:"cricket",
+         id:2
+    },
+    {
+         text:"golf",
+         id:3
+    }
+    
+]
+for (let items of obj_array){
+createTodo(items)}
+// createTodo(items)
+
+// for (let i of Obj){
+//     createTodo(i)
+// }
+// createTodo(obj) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

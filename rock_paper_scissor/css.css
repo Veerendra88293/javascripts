@@ -1,0 +1,7 @@
+.score_board{
+    display: flex;
+    gap: 50px;
+}
+.body{
+    margin: 50px;
+}

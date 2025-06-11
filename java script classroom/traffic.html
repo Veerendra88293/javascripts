@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traffic</title>
+    <link rel="stylesheet" href="traffic.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body class="">
+    <div class="container hhh">
+
+        <h1 class="heading"> Traffic Light</h1>
+        <div class="hhh">
+            <div class="d-flex mm">
+                <div class="d-flex flex-column buttons">
+                    <button id="b1" onclick="changeLight1('red')">Red</button>
+                    <button id="b2" onclick="changeLight('yellow')">Yellow</button>
+                    <button id="b3" onclick="changeLight3('green')">Green</button>
+                </div>
+                <div class="traffic-light">
+                    <div id="red"></div><br>
+                    <div id="yellow"></div><br>
+                    <div id="green"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="traffic.js"></script>
+</body>
+</html>

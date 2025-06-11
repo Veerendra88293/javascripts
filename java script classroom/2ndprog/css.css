@@ -1,0 +1,16 @@
+.jj{
+    display: flex;
+    gap: 20px;
+}
+.body{
+    margin: 30px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.emoji{
+    margin: -5px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+}
