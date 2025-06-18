@@ -50,14 +50,14 @@
 //  })
 //  console.log(item_index)
 //index of method
-let name_input = document.querySelector('.name');
-let input_name = document.querySelector('#inputid'); // Use '#' for id selector
-name_input.textContent=localStorage.getItem("desc")
+// let name_input = document.querySelector('.name');
+// let input_name = document.querySelector('#inputid'); // Use '#' for id selector
+// name_input.textContent=localStorage.getItem("desc")
 
-    input_name.addEventListener("input", function(e) {
-        localStorage.setItem("desc", e.target.value);
+//     input_name.addEventListener("input", function(e) {
+//         localStorage.setItem("desc", e.target.value);
         
-    });
+//     });
 
 
 // let obj = {
@@ -83,8 +83,36 @@ name_input.textContent=localStorage.getItem("desc")
 //     localStorage.setItem('my', JSON.stringify(obj));
 //     name_input.textContent = e.target.value;
 // });
-
-
-
+list=[]
+function array_add(name,age){
+    let details = {
+        name: name,
+        age: age,
+}
+list.push(details)
+    let stringified_data  = JSON.stringify(list);
+    localStorage.setItem("details", stringified_data);
+    let details_new = localStorage.getItem("details")
+    
+    let parsed_data = JSON.parse(details_new)
+   
+    
+    
+}
+input={"name":"veer","age":2}
+console.log(input.name)
+array_add("veeru",22)
+array_add("veer",2)
+array_add("vee",3)
+console.log(list)
+for (let i of list){
+if(input.name==i.name){
+    console.log("found",i);
+    break;
+}
+else{
+    console.log("0")
+}
+}
 
 
