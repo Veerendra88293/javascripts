@@ -20,6 +20,9 @@ users.push(details);
 localStorage.setItem("users", JSON.stringify(users));
 console.log('Username:', username);
 console.log(details);
+alert("new user created successfully");
+sign_input.value = "";
+sign_pass.value = "";
 
 
 });
@@ -60,7 +63,10 @@ for (let i = 0; i < parsed_data.length; i++) {
         parsed_data[i].name === login_details.name &&
         parsed_data[i].password === login_details.password) {
         found = true;
+        localStorage.setItem("newdata",login_details.name );
+
         goto();
+        alert("")
         break;
     }
 }

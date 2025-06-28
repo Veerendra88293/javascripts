@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div>
+
+        <h2 id="login">Login</h2>
+        <form id="form1">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <br>
+            <a id="linkk"></a>
+            <P id="errortext"></P>
+            <button type="submit">Login</button>
+            <a href="#" id="goto-signup" style="display:block;margin-top:10px;text-align:center;">Go to Sign Up</a>
+        </form>
+        <hr>
+        <h2 id="signn"></h2>
+        <form id="form2">
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" name="new-username">
+            <br>
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" name="new-password">
+            <br>
+            <button type="submit">Sign Up</button>
+            <a href="#" id="goto-login" style="display:block;margin-top:10px;text-align:center;">Go to Login</a>
+        </form>
+    </div>
+    <script src="js.js"></script>
+    <script>
+        // Show only login form by default
+        document.getElementById('form2').style.display = 'none';
+        document.getElementById('goto-signup').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('form1').style.display = 'none';
+            document.getElementById('form2').style.display = 'flex';
+            document.getElementById('login').innerHTML="";
+            document.getElementById('signn').innerHTML="sign up";
+        };
+        document.getElementById('goto-login').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('form2').style.display = 'none';
+            document.getElementById('form1').style.display = 'flex';
+            document.getElementById('signn').innerHTML="";
+            document.getElementById('login').innerHTML="Login";
+        
+        };
+    </script>
+</body>
+</html>
